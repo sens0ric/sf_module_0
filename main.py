@@ -27,11 +27,13 @@ def main():
 
 def test_main():
     max_count = 0
-    for i in range(0,1000):
+    i = 1000
+    while i >= 0:
+        i -= 1
         result = main()
         if result > max_count:
             max_count = result
-    print(f"Max count {max_count}")
+    print(f"Максимальное число попыток {max_count}")
 
 def test_range():
     max_count = 0
@@ -39,8 +41,9 @@ def test_range():
         result = game(i)
         if result > max_count:
             max_count = result
-    print(f"Max count {max_count}")
+    print(f"Максимальное число попыток {max_count}")
 
-# main()
-# test_main()
-test_range()
+main()
+
+# test_main()       # test using random input
+# test_range()      # test using all possible inputs for range from 1 to 100
